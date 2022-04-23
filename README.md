@@ -6,12 +6,12 @@ Steve, a friend, is helping his parents make an informed decision while investin
 
 ### Purpose
 
-The objective of this project is to use *Microsoft* Visual Basic for Applications or **VBA** to analyze stock returns for 2017 amd 2018. However, we want to present a more efficient VBA script that runs through the analysis quicker. To accomplish this, a previously written script will be refactored to run quicker. Based on the data and the conditional formatting of the sheet to help visualization, Steve can help his parents make a well-informed decision on which stocks to invest in.  
+The objective of this project is to use *Microsoft* Visual Basic for Applications or **VBA** to analyze stock returns for 2017 and 2018. However, we want to present a more efficient VBA script that runs through the analysis quicker. To accomplish this, a previously written script will be refactored. Based on the data and the conditional formatting of the sheet to aid visualization, Steve can help his parents make a well-informed decision on which stocks to invest in.  
 
 ## Results
 
-Below is the analysis of twelve stocks including *DQ* for the year 2017 an 2018. The output observed does not change after refactoring the code. There are 3 components addressed in the stocks analysis data:
-- the ticker name
+Below is the analysis of twelve stocks including *DQ* for the year 2017 and 2018. The output observed does not change after refactoring the code. There are 3 components addressed in the stocks analysis data:
+- the ticker name of the stock
 - the total daily volume of the stock
 - the percentage of yearly return (where all stocks that went up in value are highlighted in green, while the ones that went down are highlighted in red)
 
@@ -20,13 +20,13 @@ The outputs are as follows:
 ![Output-2017](https://user-images.githubusercontent.com/102441140/164943539-a166d46f-854e-4543-b087-5db209f794d1.png) ![Output-2018](https://user-images.githubusercontent.com/102441140/164943624-79349de6-f1c8-44f9-8bec-13c4538c4921.png)
 
 ### Total Daily Volume
-High daily volume is generally a good sign for a stock since it shows that the stock has a lot of interest and activity. But nonetheless, a low daily volume doesnt mean that the stock isn't as stable, it could simply mean that the stock might be "undiscovered". For *DQ* the daily volume is pretty low when compared with the other 11 stocks in 2017. *DQ* had the lowest daily volume. But the daily volume tripled in 2018. Yet it remained as one of the stocks with the lowest daily volume is 2018.
+High daily volume is generally a good sign for a stock since it shows that the stock has a lot of interest and activity, and is generally stable. But nonetheless, a low daily volume doesnt mean that the stock isn't a good stock. Tt could simply mean that the stock might be "undiscovered". For *DQ* the daily volume is pretty low when compared with the other 11 stocks in 2017. *DQ* had the lowest daily volume in 2017. But the daily volume tripled in 2018. Yet it remained as one of the stocks with the lowest daily volume is 2018.
 
 ### Percentage of Returns
 
-From the visual conditional formatting, we can concude that overall 2017 was a good year for green energy companies. All companies, excluding *TERP* had positive returns. *DQ* while having a low daily volume had an increase of almost 200% in 2017. Thus, in 2017 at least *DQ* was a robust stock to invest in. But the 2018 analysis reveals a grim picture. All companies except *ENPH* and *RUN* showed negative returns. *DQ* not only had the lowest daily volume but also lost 63% of its value in 2018. 
+From the visual conditional formatting, we can concude that overall 2017 was a good year for green energy companies. All companies, excluding *TERP* had positive returns. *DQ* while having a low daily volume had an increase of almost 200% in 2017. Thus, in 2017 at least, *DQ* was a robust stock to invest in. But the 2018 analysis reveals a grim picture. All companies except *ENPH* and *RUN* showed negative returns. *DQ* not only had the lowest daily volume but also lost 63% of its value in 2018. 
 
-Based on this analysis, Steve's parents should be cautious when thinking about investments in the green energy stocks. Since *ENPH* and *RUN* were the only two companies in our analysis that continued to have positive returns, Steve's parents should think about maybe looking at those stocks instead of *DQ* for investment. Moreover, Steve should also potentially analyze other stocks in the data set over a longer period of time (2017-2021) to have a clearer picture.
+Based on this analysis, Steve's parents should be cautious when thinking about investments in the green energy stocks. Since *ENPH* and *RUN* were the only two companies in our analysis that continued to have positive returns, Steve's parents should think about maybe looking at those stocks instead of *DQ* for investment. Moreover, Steve should also potentially analyze other stocks in the dataset over a longer period of time (2017-2021) to have a clearer picture.
 
 ### Code used for output 
 
@@ -34,9 +34,9 @@ The table below comapres the code before and after refactoring
 
 Code before refactoring. |  Code after refactoring.
 :------------------------------------------:| :-------------------------------------:
-Original without arrays (click to enlarge).  | Refactored with arrays (click to enlarge).	
+Original code without arrays (click to enlarge).  | Refactored code with arrays (click to enlarge).	
 ![original](https://user-images.githubusercontent.com/102441140/164944810-68ae6bd1-c36d-4bf2-bd47-f95d78b48c3a.png)  | ![refactored](https://user-images.githubusercontent.com/102441140/164944651-0e6691d8-e5e2-47e2-8a2e-5eebc9beadea.png)
-The code in a nested loop is going through one ticker at a time to generate the output in the selected worksheet | Code stays in the same loop, gathers all data and stores it in arrays first. In a separate for loop the output is pulled from the arrays and then populated in the selected worksheet.  
+The code is in a nested loop and is going through one ticker at a time to generate the output in the selected worksheet | Code stays in the same loop, gathers all data and stores it in arrays first. In a separate for loop the output is pulled from the arrays and then populated in the selected worksheet.  
  Execution time of the code for 2017: |  Execution time of the code for 2017:
 <img width="649" alt="green_stocks_2017" src="https://user-images.githubusercontent.com/102441140/164944905-fb8e223d-32f5-47d6-b667-b788ea5ef344.png"> | <img width="649" alt="VBA_Challenge_2017" src="https://user-images.githubusercontent.com/102441140/164944880-9be2f3c0-7ac7-4747-9e08-3054cb1e1fbc.png">
 Execution time of the code for 2018: |  Execution time of the code for 2018:
@@ -48,9 +48,9 @@ Code runs in 0.25 seconds | Code runs in 0.05 seconds ( **Almost 5 times faster*
 **What are the advantages or disadvantages of refactoring code?**
 
 - *Advantages of refactoring code:*
-  - **efficiency:** One of the main reasons why we need to sometimes refactor code is to execute it more efficiently so that it provides the output quicker. For example, in our refactoring we stored the data in arrays which is more efficient instead of reassigning variables after each loop
+  - **efficiency:** One of the main reasons why we need to refactor code is to execute it more efficiently so that it provides the output quicker. For example, in our refactoring we stored the data in arrays which is more efficient instead of reassigning variables after each loop
   - **readability:** Often refactoring usually makes the code more *readable* as the steps are easier or more logical.
-  - **improved functionality:** going over the same code a second time around sometimes also helps catch logical falacies that can lead to bugs, such as failing to account for any conditions that might cause the code to bug.
+  - **improved functionality:** going over the same code a second time around also helps catch logical falacies that can lead to bugs, such as failing to account for any conditions.
   - **universal:** Often it is easier to start coding based on one specific condition or dataset, and later refactoring the code so it can be applied to multiple different conditions or other datasets.
   - **reuse others' code:** Often it is easier to refactor code from trusted websites that others have written instead of working to write something from scratch.
 - *Disadvantages of refactoring code:*
